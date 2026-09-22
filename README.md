@@ -33,7 +33,7 @@ Then open http://localhost:3000, create an account on `/signup`, and browse titl
 
 | Variable | Where | Default |
 | --- | --- | --- |
-| `MONGO_URI` | API | `mongodb://127.0.0.1:27017/netflix` (falls back to memory if Mongo is down) |
+| `MONGO_URI` | API | unset (in-memory storage). Set a `mongodb://` URI to persist liked titles |
 | `PORT` | API | `5000` |
 | `REACT_APP_API_URL` | UI | `http://localhost:5000` |
 | `REACT_APP_TMDB_API_KEY` | UI | bundled demo key |

@@ -5,8 +5,15 @@ const memoryUsers = new Map();
 let dbMode = "memory";
 
 const connectDatabase = async () => {
-  const mongoUri =
-    process.env.MONGO_URI || "mongodb://127.0.0.1:27017/netflix";
+  const mongoUri = process.env.MONGO_URI;
+  const looksLikeMongo =
+    typeof mongoUri === "string" && /^mongodb(\+srv)?:\/\//.test(mongoUri);
+
+  if (!looksLikeMongo) {
+    dbMode = "memory";
+    console.log("Using in-memory liked-list storage.");
+    return dbMode;
+  }
 
   try {
     await mongoose.connect(mongoUri, { serverSelectionTimeoutMS: 2000 });
