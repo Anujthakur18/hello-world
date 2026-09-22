@@ -2,38 +2,33 @@
 
 Streaming UI clone based on [Boss-Coder-Academy/Netflix](https://github.com/Boss-Coder-Academy/Netflix).
 
-The app has two parts:
-
-- `netflix-ui` — React app (signup, login, home, movies, TV shows, my list, player)
-- `netflix-api` — Express API for liked movies
-
-Accounts are stored in the browser (no Firebase project required). Liked movies are stored in memory by default, or in MongoDB if `MONGO_URI` is set and reachable. Movie catalogs come from [TMDB](https://www.themoviedb.org/).
-
-## Run locally
-
-You need Node.js 18+.
+**Start here:** [QUICKSTART.md](QUICKSTART.md)
 
 ```bash
-cd netflix-api
-npm install
+npm run setup
 npm start
 ```
 
-In a second terminal:
+Open http://localhost:3000 and create an account (email + password, 6+ characters).
 
-```bash
-cd netflix-ui
-npm install
-npm start
-```
+## Docs
 
-Then open http://localhost:3000, create an account on `/signup`, and browse titles.
+- [Quick start](QUICKSTART.md) — run it now
+- [How it works](docs/HOW-IT-WORKS.md) — folders, routes, API, auth
+- [Rebuild / extend](docs/RECREATE.md) — fastest way to remake or add features
+
+## What is in this repo
+
+- `netflix-ui` — React: signup, login, home, movies, TV shows, my list, player
+- `netflix-api` — Express: liked movies (`GET /health` on port 5000)
+
+Accounts stay in the browser. Liked movies stay in API memory unless `MONGO_URI` is set. Catalogs come from [TMDB](https://www.themoviedb.org/).
 
 ## Optional configuration
 
 | Variable | Where | Default |
 | --- | --- | --- |
-| `MONGO_URI` | API | unset (in-memory storage). Set a `mongodb://` URI to persist liked titles |
+| `MONGO_URI` | API | unset (in-memory). Use a `mongodb://` URI to persist likes |
 | `PORT` | API | `5000` |
 | `REACT_APP_API_URL` | UI | `http://localhost:5000` |
 | `REACT_APP_TMDB_API_KEY` | UI | bundled demo key |

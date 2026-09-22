@@ -1,0 +1,12 @@
+{
+  "name": "netflix-clone",
+  "private": true,
+  "description": "Netflix clone UI + liked-list API",
+  "scripts": {
+    "setup": "npm install --prefix netflix-api && npm install --prefix netflix-ui",
+    "start": "bash scripts/dev.sh",
+    "start:api": "npm start --prefix netflix-api",
+    "start:ui": "npm start --prefix netflix-ui",
+    "test:api": "npm test --prefix netflix-api"
+  }
+}
