@@ -14,6 +14,7 @@ Open http://localhost:3000 and create an account (email + password, 6+ character
 ## Docs
 
 - [Quick start](QUICKSTART.md) — run it now
+- [View and present](docs/PRESENT.md) — how to open it in a browser and demo it
 - [How it works](docs/HOW-IT-WORKS.md) — folders, routes, API, auth
 - [Rebuild / extend](docs/RECREATE.md) — fastest way to remake or add features
 

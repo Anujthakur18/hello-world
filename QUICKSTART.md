@@ -71,7 +71,12 @@ Stop that process by PID. Do not use `pkill -f`.
 | UI cannot add to list | API must be on port 5000 (`curl http://localhost:5000/health`) |
 | Port already in use | Reuse the running server, or free that port |
 
+## Show this to someone else
+
+The project is the running site at **http://localhost:3000**, not the source files. Full demo script and slide outline: [docs/PRESENT.md](docs/PRESENT.md).
+
 ## Next reading
 
+- [View and present](docs/PRESENT.md)
 - [How the project is built](docs/HOW-IT-WORKS.md)
 - [Rebuild / extend checklist](docs/RECREATE.md)
